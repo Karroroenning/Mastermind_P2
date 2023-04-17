@@ -1,13 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Pixels&family=Saira:wght@100&display=swap');
+
+
+
 body {
     background-color: black;
+
 }
 
 .background-image {
   background: url(../images/stockvault-artificial-intelligence-bright-brain257179.jpg)center center;
-  opacity:0.4;
   position:absolute;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 } 
 
+body h1 {
+    font-family: "Rubik Pixels", "Press Start 2P";
+    position:relative;
+    color: white;
+    font-size: 70px;
+    text-transform: uppercase;
+    margin-top: 150px;
+    margin-left: 390px;
+    text-align: center;
+}
+
+.startgame {
+    font-family: "Rubik Pixels", "Press Start 2P";
+    position:relative;
+    text-transform: uppercase;
+    color: white;
+    font-size: 30px;
+    top: 130px;
+    left: 520px;
+}
