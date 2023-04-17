@@ -1,0 +1,13 @@
+body {
+    background-color: black;
+}
+
+.background-image {
+  background: url(../images/stockvault-artificial-intelligence-bright-brain257179.jpg)center center;
+  opacity:0.4;
+  position:absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+} 
+
