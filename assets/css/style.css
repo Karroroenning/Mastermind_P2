@@ -4,6 +4,7 @@
 
 body {
     background-color: black;
+    color: white;
 
 }
 
@@ -65,4 +66,14 @@ body h1 {
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%) 
+}
+
+/*Game board*/
+
+.board-game {
+    border: solid aqua;
+}
+
+.row-number {
+    font-size: 30px;
 }
