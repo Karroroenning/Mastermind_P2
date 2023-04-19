@@ -1,13 +1,13 @@
-let btnColor = document.querySelectorAll('.choose');
-let choosenColor = document.querySelector('.color-row')
+const btnColor = document.querySelectorAll('.choose');
+const choosenColor = document.querySelector('.color-row')
 
 // get 4 random colors
 
-let colors = ["blue", "yellow", "orange", "green", "purple", "red"]
+const colors = ["blue", "yellow", "orange", "green", "purple", "red"]
 let finishRow = randomFinishRow();
 
 function randomFinishRow() {
-    let newRow = [...new Array(4)].map(color => {
+    const newRow = [...new Array(4)].map(color => {
         let random = Math.floor(Math.random() * Math.floor(colors.length));
         return colors[random];
     })
@@ -18,7 +18,7 @@ function randomFinishRow() {
 // Choose color in the right div
 
 btnColor.forEach(btn => {
-    let color = btn.classList[1]
+    const color = btn.classList[1]
     btn.addEventListener("click", () => selectColor(color));
 });
 
