@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Pixels&family=Saira:wght@100&display=swap');
+@import url(//fonts.googleapis.com/css?family=Vibur);
 
 
 
@@ -29,6 +30,54 @@ body h1 {
     transform: translate(-50%, -50%) 
 }
 
+/* Animation, neon light in the heading line */
+
+.logo b{
+    font: 400 19vh;
+    color: #fee;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #e044ff, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+  }
+  .logo b span{
+    animation: blink linear infinite 2s;
+  }
+  .logo b span:nth-of-type(2){
+    animation: blink linear infinite 3s;
+  }
+  @keyframes blink {
+    78% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    79%{
+       color: #333;
+    }
+    80% {
+      text-shadow: none;
+    }
+    81% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    82% {
+      color: #333;
+      text-shadow: none;
+    }
+    83% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    92% {
+      color: #333;
+      text-shadow: none;
+    }
+    92.5% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+  }
+
+/* start game sign with zoom effects */
+
 .startgame {
     font-family: "Rubik Pixels", "Press Start 2P";
     position:absolute;
@@ -40,6 +89,17 @@ body h1 {
     margin-right: -50%;
     transform: translate(-50%, -50%) 
 }
+
+.startgame:hover {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+    padding: 10px;
+    letter-spacing: 2px;
+    transition: all .25s;
+  }
 
 /* game page*/
 
@@ -77,14 +137,18 @@ a:visited {
     color: white;
     text-decoration: none;
 }
+  
+  .restartgame:hover {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+    padding: 10px;
+    letter-spacing: 2px;
+    transition: all .25s;
+  }
 
-.zoom {
-    transition: transform .2s;
-}
-
-.zoom:hover {
-    transform: scale(1.5);
-}
 
 /*Game board*/
 
@@ -145,24 +209,48 @@ a:visited {
 
 .blue {
     background-color: blue;
+     box-shadow:
+     0 0 10px 2px #48a6ff,
+     0 0 80px 10px rgb(0, 162, 255), 
+     0 0 10px 0px rgb(0, 26, 255)
 }
 
 .yellow {
-    background-color: yellow;
+    background-color: rgb(180, 180, 0);
+    box-shadow:
+     0 0 10px 2px #fff599,
+     0 0 80px 10px rgb(255, 237, 71), 
+     0 0 10px 0px rgb(229, 255, 0)
 }
 
 .orange {
-    background-color: orange;
+    background-color: rgb(180, 117, 0);
+    box-shadow:
+     0 0 10px 2px #ffbc6e,
+     0 0 80px 10px rgb(255, 157, 45), 
+     0 0 10px 0px rgb(255, 166, 0)
 }
 
 .green {
     background-color: green;
+    box-shadow:
+     0 0 10px 2px #bdff67,
+     0 0 80px 10px rgb(141, 255, 48), 
+     0 0 10px 0px rgb(9, 255, 0)
 }
 
 .purple {
     background-color: purple;
+    box-shadow:
+     0 0 10px 2px #e979ff,
+     0 0 80px 10px rgb(255, 61, 239), 
+     0 0 10px 0px rgb(234, 0, 255)
 }
 
 .red {
-    background-color: red;
+    background-color: rgb(148, 0, 0);
+    box-shadow:
+     0 0 10px 2px #ff798f,
+     0 0 80px 10px rgb(255, 51, 119), 
+     0 0 10px 0px rgb(255, 0, 55)
 }
