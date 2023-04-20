@@ -185,16 +185,31 @@ a:visited {
     left: 2.2rem;
 }
 
+.hints {
+    top: 155px;
+    position: absolute;
+    right: 22rem;
+
+}
+
 
 /* choose colors */
 
-.colors {
+h2 {
+    position: absolute;
     justify-content: center;
-    top: 200px;
     padding: 5px;
-    height: 290px;
-    width: 70px;
-    background-color: rgba(0, 0, 0, 0.5);
+    top: 140px;
+    right: 68vw;
+    text-align: center;
+}
+
+.colors, .hints-item {
+    position: absolute;
+    justify-content: center;
+    padding: 5px;
+    top: 220px;
+    right: 70vw;
 }
 
 .choose,
@@ -253,4 +268,18 @@ a:visited {
      0 0 10px 2px #ff798f,
      0 0 80px 10px rgb(255, 51, 119), 
      0 0 10px 0px rgb(255, 0, 55)
+}
+
+/* Hints */
+
+.full {
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+}
+
+.half {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
 }
