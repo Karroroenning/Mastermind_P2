@@ -301,6 +301,7 @@ h2 {
 .hint_holes {
     position: absolute;
     background: #000;
+    left: 34vw;
     width: 40px;
     height: 40px;
     margin: 4px;
@@ -313,10 +314,19 @@ h2 {
     align-content: center;
 }
 
-.hint {
+.hole {
     width: 16px;
     height: 16px;
     border-radius: 16px;
     margin: 2px;
     background-color: #2e0d35;
+}
+
+/* Check if colors is right */
+ 
+.check_box {
+  position: absolute;
+  font-size: 40px;
+  left: 41vw;
+  top: 25px;
 }

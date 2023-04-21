@@ -1,6 +1,5 @@
 const btnColor = document.querySelectorAll('.choose');
 const choosenColor = document.querySelector('.color-row')
-const hintsSelector = document.querySelector('.hints');
 
 // get 4 random colors
 
@@ -36,52 +35,32 @@ div.classList.add(color);
 choosenColor.appendChild(div);
 selectedColors.push(color);
 
-if(selectedColors.length === 5) {
-    
-    for(const selColor of selectedColors) {
-    let hintsDiv = document.createElement('div');
-    hintsDiv.classList.add('hints-item');
-    hintsDiv.classList.add(selColor);
-    hintsSelector.appendChild(div);
-  }
-
-  const hintArray = calculateHints(selectedColors);
-
-  for(const hint of hintArray) {
-    const help = document.createElement('div');
-    if(hint === 'full') {
-        help.classList.add('full');
-    }
-    else {
-        help.classList.add('half');
-    }
-    hintsSelector.appendChild(help);
-  }
-
-
-
-  selectedColors.length = 0;
-  choosenColor.innerHTML = "";
- }
 }
 
-function calculateHints(colors) {
-    const hints = [];
-    const dublicateCheck = [];
-
-    colors.forEach((color, game) => {
-        if(finishRow[game] === color) {
-            hints.push("full");
-            dublicateCheck.push(color);
-        }
-
-    })
-
-    colors.forEach((color, game) => {
-        if(dublicateCheck.includes(color) && finishRow.includes(color)) {
-            hints.push("half");
-        }
-    })
-
-    return hints;
+function handleColorValidation(validation) {
+	const won = validation.black == 4;
+	const little_holes = attemptRows[attempt].getElementsByClassName('hint_holes');
+	
+    // Fill the hint holes
+	const length = little_holes.length;
+	for (let i = 0; i < length; i++) {
+		if (validation.black > 0) {
+			hint_holes[i].className += " filled black";
+			validation.black--;
+			continue;
+		} else if (validation.white > 0) {
+			hint_holes[i].className += " filled white";
+			validation.white--;
+			continue;
+		} else break;
+	}
+    // Next step
+	if (!won && attempt + 1 < 10) {
+		nextAttempt();
+	} else if (won) {
+		alert(' You are a champ! Good job.')
+	} else if (attempt + 1 === 10) {
+		// show lose
+		alert('Sorry.... end of trying. Try again!')
+	}
 }
