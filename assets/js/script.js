@@ -42,7 +42,7 @@ function handleColorValidation(validation) {
 	const little_holes = attemptRows[attempt].getElementsByClassName('hint_holes');
 	
     // Fill the hint holes
-	const length = little_holes.length;
+	const length = choosen-color.length;
 	for (let i = 0; i < length; i++) {
 		if (validation.black > 0) {
 			hint_holes[i].className += " filled black";
@@ -63,4 +63,21 @@ function handleColorValidation(validation) {
 		// show lose
 		alert('Sorry.... end of trying. Try again!')
 	}
+}
+
+function setupAttemptRow() {
+	setDropTargets();
+	// Display check button
+	const checkButton = attemptRows[attempt].getElementsByClassName('check_box')[0];
+	checkButton.style.opacity = '1';
+	checkButton.style.pointerEvents = 'auto';
+}
+
+function checkColors() {
+	if (currentInput.indexOf(null) > -1) {
+		// Not all holes are filled
+		return;
+	}
+	const request = new XMLHttpRequest();
+	const params = `colors=${currentInput}`;
 }
